@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comida Colombiana Tradicional</title>
+
+<style>
+html, body{
+  margin:0;
+  padding:0;
+  width:100%;
+  overflow-x:hidden;
+  font-family:'Inter',system-ui,Arial,sans-serif;
+  background:#050b0f;
+  color:#e5fef1;
+}
+*{box-sizing:border-box}
+
+/* ===== HEADER ===== */
+header{
+  position:sticky;
+  top:0;
+  z-index:99;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:14px 22px;
+  background:rgba(0,255,153,.12);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(0,255,153,.25);
+}
+header .icon{font-size:26px;color:#00ff99}
+header .title{font-size:20px;font-weight:600}
+
+/* ===== HERO ===== */
+.hero{
+  min-height:70vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:40px 20px;
+  background:
+    radial-gradient(circle at top, rgba(0,255,153,.18), transparent 60%),
+    linear-gradient(180deg,#07140e,#050b0f);
+}
+.hero h1{
+  font-size:46px;
+  font-weight:300;
+  margin:0;
+  text-shadow:0 0 18px rgba(0,255,153,.4);
+}
+.hero h2{
+  font-size:32px;
+  font-weight:300;
+  margin-top:8px;
+  color:#00ff99;
+}
+.hero button{
+  margin-top:36px;
+  padding:16px 48px;
+  font-size:18px;
+  font-weight:700;
+  border-radius:14px;
+  border:1px solid #00ff99;
+  background:linear-gradient(135deg,#00ff99,#00cc77);
+  color:#022015;
+  cursor:pointer;
+  box-shadow:0 0 22px rgba(0,255,153,.6);
+  transition:.25s;
+}
+.hero button:hover{transform:scale(1.05)}
+
+/* ===== MENU ===== */
+.menu{
+  max-width:1000px;
+  margin:60px auto;
+  padding:0 20px;
+}
+.menu h3{
+  text-align:center;
+  font-size:30px;
+  color:#00ff99;
+  margin-bottom:30px;
+}
+.categoria{
+  margin-top:35px;
+  font-size:22px;
+  color:#7affc9;
+  border-bottom:1px solid rgba(0,255,153,.25);
+  padding-bottom:6px;
+}
+.item{
+  display:flex;
+  justify-content:space-between;
+  padding:14px 10px;
+  margin-top:10px;
+  background:rgba(255,255,255,.04);
+  border-radius:12px;
+}
+.item span{font-size:17px}
+.precio{color:#00ff99;font-weight:700}
+
+/* ===== FOOTER ===== */
+footer{
+  padding:40px 20px;
+  background:linear-gradient(180deg,#050b0f,#030709);
+  border-top:1px solid rgba(0,255,153,.25);
+}
+footer h3{
+  font-size:22px;
+  color:#00ff99;
+  margin-bottom:14px;
+}
+.footer-box{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:30px;
+}
+.footer-icon{
+  width:60px;
+  height:60px;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  background:rgba(0,255,153,.15);
+  border:1px solid rgba(0,255,153,.35);
+}
+footer .text{font-size:17px}
+
+/* ===== TERMS ===== */
+.terms{
+  max-width:900px;
+  margin:auto;
+  font-size:14px;
+  line-height:1.6;
+  color:#c9f8e5;
+  border-top:1px solid rgba(0,255,153,.25);
+  padding-top:25px;
+}
+.terms h4{color:#00ff99;margin-bottom:10px}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:600px){
+  .hero h1{font-size:34px}
+  .hero h2{font-size:24px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <span class="icon">🍽️</span>
+  <span class="title">Comida Colombiana</span>
+</header>
+
+<section class="hero">
+  <h1>Comida Colombiana</h1>
+  <h2>Tradicional y Típica</h2>
+  <button onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+    Ver menú
+  </button>
+</section>
+
+<!-- ===== MENU ===== -->
+<section class="menu" id="menu">
+  <h3>Menú</h3>
+
+  <div class="categoria">Desayunos</div>
+  <div class="item"><span>Calentado con huevo</span><span class="precio">$12.000</span></div>
+  <div class="item"><span>Arepa con queso</span><span class="precio">$6.000</span></div>
+  <div class="item"><span>Huevos pericos</span><span class="precio">$10.000</span></div>
+
+  <div class="categoria">Almuerzos</div>
+  <div class="item"><span>Bandeja paisa</span><span class="precio">$18.000</span></div>
+  <div class="item"><span>Sancocho</span><span class="precio">$20.000</span></div>
+  <div class="item"><span>Arroz con pollo</span><span class="precio">$14.000</span></div>
+
+  <div class="categoria">Bebidas</div>
+  <div class="item"><span>Jugo natural</span><span class="precio">$5.000</span></div>
+  <div class="item"><span>Gaseosa</span><span class="precio">$4.000</span></div>
+  <div class="item"><span>Agua</span><span class="precio">$3.000</span></div>
+</section>
+
+<footer>
+  <h3>Gastronomía Colombiana</h3>
+  <div class="footer-box">
+    <div class="footer-icon">🍲</div>
+    <span class="text">Sitio informativo sobre cocina colombiana</span>
+  </div>
+
+  <div class="terms">
+    <h4>Términos y Condiciones</h4>
+    <p>Sitio informativo. No se realizan ventas, pagos, pedidos ni reservas.</p>
+    <p>Este sitio no ofrece productos financieros, créditos, préstamos ni seguros.</p>
+    <p>La información presentada es referencial y puede cambiar sin previo aviso.</p>
+    <p><strong>Actualización:</strong> 2025</p>
+  </div>
+</footer>
+
+</body>
+</html>
